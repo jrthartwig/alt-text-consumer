@@ -12,16 +12,16 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <div className="title">Alt Text Generator - {useUrl ? "URL" : "Upload"}</div>
-        <div className="tabs">
-          <button onClick={() => setUseUrl(true)} className={useUrl ? "selected" : ""}>Use URL</button>
-          <button onClick={() => setUseUrl(false)} className={useUrl ? "" : "selected"}>Use Image</button>
-        </div>
-        {
-          useUrl
-            ? <UrlMethod />
-            : <ImageUploadMethod />
-        }
       </header>
+      <div className="tabs">
+        <button onClick={() => setUseUrl(true)} className={useUrl ? "selected" : ""}>Use URL</button>
+        <button onClick={() => setUseUrl(false)} className={useUrl ? "" : "selected"}>Use Image</button>
+      </div>
+      {
+        useUrl
+          ? <UrlMethod />
+          : <ImageUploadMethod />
+      }
     </div>
   );
 }

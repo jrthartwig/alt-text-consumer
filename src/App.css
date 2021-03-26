@@ -1,16 +1,18 @@
 .App {
   text-align: center;
+  padding:1.5rem;
+  min-height: 100vh;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin-bottom:2rem;
 }
 
 .title{
@@ -22,10 +24,14 @@ img, .upload-center, .output-center{
 }
 
 .content{
-  display: flex;
-  flex-direction: row;
+  display: grid;
+grid-template-columns: 49% .1rem 49%;
   max-width: 100%;
   margin-bottom: 2rem;
+}
+ .content div:first-child,
+.content div:last-child{
+  border:.1rem solid #eee;
 }
 
 .tabs{
@@ -34,7 +40,7 @@ img, .upload-center, .output-center{
   margin-bottom: 0.5rem;
 }
 
-.tabs button{
+.tabs button:not(:first-child){
   margin-left: 0.5rem;
 }
 
@@ -43,32 +49,32 @@ button.copier{
   right: 0.5rem;
   top: 0.5rem;
   background: white;
+  right:.5rem;
+  top: .5rem;
+  padding: .1rem .6rem;
 }
 
 button.copier.copied{
   background: rgb(187, 235, 187);
 }
 
-label.code-title{
-  position: absolute;
-  left: 0.5rem;
-  top: 0.5rem;
-  font-size: small;
+button.selected{
+  background-color: #333;
+  color:#fff;
 }
 
 .code-output{
   position: relative;
   border: 4px solid black;
   background-color: rgb(104, 135, 202);
-  padding: 0.25rem;
-  padding-top: 1.25rem;
-  width: 70%;
+  padding: 1rem;
+  box-sizing:border-box;
+  width: 100%;
 }
 
-input{
-  background-color: white;
-  border: none;
-  box-shadow: none;
+.code-output label{
+  display: block;
+  margin-bottom:.5rem;
 }
 
 input.pre-code{
