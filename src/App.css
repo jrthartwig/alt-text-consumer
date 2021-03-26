@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,15 +13,68 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.title{
+  padding: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+img, .upload-center, .output-center{
+  width: 100%;
+}
+
+.content{
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+button.copier{
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  background: white;
+}
+
+button.copier.copied{
+  background: rgb(187, 235, 187);
+}
+
+label.code-title{
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  font-size: small;
+}
+
+.code-output{
+  position: relative;
+  border: 4px solid black;
+  background-color: rgb(104, 135, 202);
+  padding: 0.25rem;
+  padding-top: 1.25rem;
+  width: 70%;
+}
+
+input{
+  background-color: white;
+  border: none;
+  box-shadow: none;
+}
+
+input.pre-code{
+  background-color: rgb(182, 200, 238);
+  font-size: small;
+}
+
+
+input{
+  width: 98%;
+  margin-bottom: 0.5rem;
+}
+
+.divider{
+  width: 0;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-left: white 1px solid;
 }

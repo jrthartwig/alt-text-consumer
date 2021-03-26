@@ -1,41 +1,41 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { APP_ENDPOINT } from './api-endpoints';
+import { fetchPOST } from './api';
+import UploadCenter from './UploadCenter';
+import OutputCenter from './OutputCenter';
+
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import { DEFAULT_IMAGE } from './defaults';
+import CodeOutput from './CodeOutput';
 
 const App = () => {
 
-  const [altText, setAltText] = useState();
+  const [imageSource, setImageSource] = useState(DEFAULT_IMAGE);
+  const [altText, setAltText] = useState("< Waiting on Alt Text >");
 
-  const imageSrc = "https://www.sciencenews.org/wp-content/uploads/2019/07/072319_ee_cat-allergy_feat.jpg"
-
-  useEffect(() => {
-
-    const body = {
-      url: imageSrc,
-      language: "not a language"
-    };
-
-    fetch('https://alt-text-generator.azurewebsites.net:443/api/Alt-Text-Generator/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=gRkN8GmmAPVncl6kxRu_RhpoYF2wKDLKqRM51ULixQY',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(body)
-      })
-      .then(response => response.json())
-      .then(response => setAltText(response[0].text))
-      .catch(console.log)
-  }, [])
+  const retrieveAltText = async () => {
+    try {
+      const response = await fetchPOST(APP_ENDPOINT, {
+        language: "en",
+        url: imageSource,
+      });
+      setAltText(response[0].text);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        {
-          altText &&
-          <img src={imageSrc} alt={altText} />
-        }
+        <div className="title">Alt Text Generator</div>
+        <input aria-label="image url" value={imageSource} onChange={e => setImageSource(e.target.value)} />
+        <div className="content">
+          <UploadCenter imageSource={imageSource} retrieveAltText={retrieveAltText} />
+          <div className="divider"></div>
+          <OutputCenter altText={altText} imageSource={imageSource} />
+        </div>
+        <CodeOutput altText={altText} imageSource={imageSource} />
       </header>
     </div>
   );
