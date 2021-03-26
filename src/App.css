@@ -28,6 +28,16 @@ img, .upload-center, .output-center{
   margin-bottom: 2rem;
 }
 
+.tabs{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+}
+
+.tabs button{
+  margin-left: 0.5rem;
+}
+
 button.copier{
   position: absolute;
   right: 0.5rem;

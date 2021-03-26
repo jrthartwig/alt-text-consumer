@@ -21,7 +21,7 @@ const CodeOutput = ({ imageSource, altText }) => {
                 <button className={copySuccess ? "copier copied" : "copier"} onClick={copyToClipboard}>{'\u23CD'}</button>
             }
             <label className="code-title">React Snippet</label>
-            <input className="pre-code" value={code} ref={inputRef} />
+            <input className="pre-code" value={code} ref={inputRef} readOnly={true} />
         </div>
     );
 }
