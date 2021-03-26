@@ -12,7 +12,7 @@ const CodeOutput = ({ imageSource, altText }) => {
         setCopySuccess(true);
     };
 
-    const code = `<img src={${imageSource}} alt="${altText}" />`;
+    const code = `<img src="${imageSource}" alt="${altText}" />`;
 
     return (
         <div className="code-output">
