@@ -20,7 +20,7 @@ const CodeOutput = ({ imageSource, altText }) => {
                 document.queryCommandSupported('copy') &&
                 <button className={copySuccess ? "copier copied" : "copier"} onClick={copyToClipboard}>{'\u23CD'}</button>
             }
-            <label className="code-title">React Snippet</label>
+            <label className="code-title">HTML   Snippet</label>
             <input className="pre-code" value={code} ref={inputRef} readOnly={true} />
         </div>
     );
