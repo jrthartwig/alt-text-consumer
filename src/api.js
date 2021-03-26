@@ -13,6 +13,7 @@ export const fetchFile = (url, data) => {
         method: 'POST',
         headers: {
             'Content-Type': 'application/octet-stream',
+            'Ocp-Apim-Subscription-Key': process.env.REACT_APP_KEY
         },
         body: data
     }).then(response => response.json());

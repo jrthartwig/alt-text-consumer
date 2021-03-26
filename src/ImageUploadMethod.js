@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { fetchFile } from './api';
-import { APP_ENDPOINT } from './api-endpoints';
+import { APP_IMAGE_ENDPOINT } from './api-endpoints';
 import CodeOutput from './CodeOutput';
 import { convertToArrayBuffer, convertToBase64 } from './converter';
 import OutputCenter from './OutputCenter';
@@ -24,11 +24,8 @@ const ImageUploadMethod = () => {
         if (!imageSource)
             return;
         try {
-            const response = await fetchFile(APP_ENDPOINT, {
-                language: "en",
-                data: imageRaw,
-            });
-            setAltText(response[0].text);
+            const response = await fetchFile(APP_IMAGE_ENDPOINT, imageRaw);
+            setAltText(response.description.captions[0].text);
         } catch (error) {
             console.error(error);
         }
