@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { APP_ENDPOINT } from './api-endpoints';
+import { APP_OCR_ENDPOINT } from './api-endpoints';
 import { fetchPOST } from './api';
 import UploadCenter from './UploadCenter';
 import OutputCenter from './OutputCenter';
@@ -15,7 +15,7 @@ const App = () => {
 
   const retrieveAltText = async () => {
     try {
-      const response = await fetchPOST(APP_ENDPOINT, {
+      const response = await fetchPOST(APP_OCR_ENDPOINT, {
         language: "en",
         url: imageSource,
       });
