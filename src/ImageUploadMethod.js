@@ -38,7 +38,6 @@ const ImageUploadMethod = () => {
                 {imageSource
                     ? <>
                         <UploadCenter altText={"image to upload"} imageSource={imageSource} retrieveAltText={retrieveAltText} />
-                        <div className="divider"></div>
                         <OutputCenter altText={altText} imageSource={imageSource} />
                     </>
                     : <div>Upload an image to start.</div>

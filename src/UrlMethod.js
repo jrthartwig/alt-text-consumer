@@ -28,7 +28,6 @@ const UrlMethod = () => {
             <input aria-label="image url" value={imageSource} onChange={e => setImageSource(e.target.value)} />
             <div className="content">
                 <UploadCenter imageSource={imageSource} retrieveAltText={retrieveAltText} />
-                <div className="divider"></div>
                 {
                     altText === ALT_TEXT_PLACE_HOLDER
                         ? <div>Alt text has not been generated.</div>
