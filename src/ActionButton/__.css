@@ -1,0 +1,37 @@
+.action-buttons {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    align-items: center;
+}
+
+.action-button,
+.action-button--selected {
+    width: 100%;
+    max-width: 15rem;
+    height: 15rem;
+    background-color: transparent;
+    border: 0.2rem solid #ccc;
+    color: #ccc;
+    border-radius: 0.3rem;
+    transition-duration: 0.5s;
+}
+.action-button{
+    transform: scale(0.9);
+}
+.action-button--selected {
+    color: var(--light-color);
+    border-color: var(--light-color);
+    outline: var(--light-color);
+    transform: scale(1);
+}
+
+.action-button__icon {
+    font-size: 5rem;
+    padding-bottom: 0.5rem;
+}
+
+.action-button__text {
+    font-size: 1.6rem;
+    font-weight: 900;
+}
