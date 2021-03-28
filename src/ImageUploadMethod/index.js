@@ -39,7 +39,7 @@ const ImageUploadMethod = () => {
     }
 
     return (
-        <>
+        <div className="image-upload-method">
             <input {...{
                 'aria-label': "image input",
                 className: "image-upload-method__choose-file-input",
@@ -49,8 +49,8 @@ const ImageUploadMethod = () => {
                 onChange: e => handleFileUpload(e),
             }} />
 
-            <label for="chooseFile"><Upload/> Choose a file</label>
-            
+            <label for="chooseFile"><Upload /> Choose a file</label>
+
             {fetching && <div className='image-upload-method__fetching'></div>}
 
             <div className={`image-upload-method__result${hasResult && imageSource && !fetching ? '--active' : ''}`}>
@@ -59,7 +59,7 @@ const ImageUploadMethod = () => {
             </div>
 
             <UploadCenter {...{ imageSource, retrieveAltText }} />
-        </>
+        </div>
     )
 }
 

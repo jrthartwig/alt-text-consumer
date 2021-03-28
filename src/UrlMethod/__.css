@@ -5,6 +5,13 @@
     margin: 1.5rem auto;
 }
 
+@media screen and (min-width: 768px) {
+    .url-method {
+        padding: 4rem 1.5rem 1.5rem;
+        border:none;
+    }
+}
+
 .url-method__url-input-label {
     display: block;
     padding: 1rem 0.5rem;

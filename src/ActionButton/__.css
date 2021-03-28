@@ -6,7 +6,13 @@
     max-width: 99.2rem;
     margin: 3rem auto;
 }
-
+@media screen and (min-width: 768px) {
+    .action-buttons {
+        grid-template-columns:20rem;
+        grid-template-rows: 20rem 20rem;
+        padding: 1.5rem;
+    }
+}
 .action-button,
 .action-button--selected {
     width: 100%;
