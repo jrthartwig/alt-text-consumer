@@ -1,0 +1,38 @@
+
+.upload-center__generate-button {
+    background-color: transparent;
+    border: 0.2rem solid var(--light-color);
+    border-radius: 0.3rem;
+    background-color: var(--dark-color);
+    color: white;
+    font-size: 1.8rem;
+    padding: 1rem 0.7rem;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+.upload-center__display-image {
+    background-color: #efefef;
+    border-radius: 0.3rem;
+    border: 0.2rem solid var(--light-color);
+    padding: 2rem;
+    background-color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+.upload-center__image-placeholder {
+    position: relative;
+    min-height: 10rem;
+    background-color: white;
+    font-weight: 700;
+}
+.upload-center__image-placeholder:after {
+    position: absolute;
+    content: "Add source to view image";
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--dark-color);
+}
