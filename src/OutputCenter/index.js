@@ -1,4 +1,5 @@
 import React from 'react';
+import './__.css';
 
 const OutputCenter = ({ altText, imageSource }) => {
     return (
