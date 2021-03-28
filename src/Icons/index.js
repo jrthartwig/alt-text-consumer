@@ -1,7 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileAlt, faGlobe, faSyncAlt } from '@fortawesome/free-solid-svg-icons';
+import { faCog, faCopy, faFileAlt, faGlobe, faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
-export const Globe = () => <FontAwesomeIcon icon={faGlobe} />
+export const Copy = () => <FontAwesomeIcon icon={faCopy} />
 export const File = () => <FontAwesomeIcon icon={faFileAlt} />
-export const Sync = () => <FontAwesomeIcon icon={faSyncAlt} />
+export const Globe = () => <FontAwesomeIcon icon={faGlobe} />
+export const QuoteLeft = () => <FontAwesomeIcon icon={faQuoteLeft} />
+export const QuoteRight = () => <FontAwesomeIcon icon={faQuoteRight} />
+export const Cog = props => <FontAwesomeIcon icon={faCog} {...props} />
+
