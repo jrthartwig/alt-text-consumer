@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import UrlMethod from './UrlMethod';
 import ImageUploadMethod from './ImageUploadMethod';
 import Header, { HeaderAltColor } from './Header';
-import './App.css';
 import ActionButton, { ActionsButtonList } from './ActionButton';
 import { File, Globe } from './Icons';
+import './App.css';
 
 
 const App = () => {

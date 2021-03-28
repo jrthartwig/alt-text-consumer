@@ -18,44 +18,6 @@
     margin-bottom: 1.5rem;
 }
 
-.url-method__generate-button {
-    background-color: transparent;
-    border: 0.2rem solid var(--light-color);
-    border-radius: 0.3rem;
-    background-color: var(--dark-color);
-    color: white;
-    font-size: 1.8rem;
-    padding: 1rem 0.7rem;
-    width: 100%;
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
-}
-.url-method__display-image {
-    background-color: #efefef;
-    border-radius: 0.3rem;
-    border: 0.2rem solid var(--light-color);
-    padding: 2rem;
-    background-color: var(--dark-color);
-    margin-bottom: 1rem;
-}
-.url-method__image-placeholder {
-    position: relative;
-    min-height: 10rem;
-    background-color: white;
-    font-weight: 700;
-}
-.url-method__image-placeholder:after {
-    position: absolute;
-    content: "Enter source URL to view image";
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--dark-color);
-}
-
 .url-method__result {
     height: 29.5rem;
     max-height: 0;

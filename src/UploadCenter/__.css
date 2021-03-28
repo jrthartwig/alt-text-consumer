@@ -6,10 +6,12 @@
     background-color: var(--dark-color);
     color: white;
     font-size: 1.8rem;
-    padding: 1rem 0.7rem;
     width: 100%;
     text-transform: uppercase;
-    letter-spacing: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: .1rem;
 }
 .upload-center__display-image {
     background-color: #efefef;

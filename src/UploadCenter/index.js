@@ -5,7 +5,7 @@ const UploadCenter = ({ imageSource, retrieveAltText }) =>
     <>
         <div className='upload-center__display-image'>
             {imageSource
-                ? <img src={imageSource} />
+                ? <img src={imageSource} alt='Generate ALT text from this image' />
                 : <div className="upload-center__image-placeholder"></div>
             }
         </div>

@@ -6,12 +6,40 @@
     background-color: var(--dark-color);
     margin-bottom: 1rem;
 }
+
+.image-upload-method__choose-file-input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.image-upload-method__choose-file-input + label {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 0.1rem;
+    color: var(--dark-color);
+    border: 0.2rem solid var(--dark-color);
+    background-color: transparent;
+    text-transform: uppercase;
+    border-radius: 0.3rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
 .image-upload-method__image-placeholder {
     position: relative;
     min-height: 10rem;
     background-color: white;
     font-weight: 700;
 }
+
 .image-upload-method__image-placeholder:after {
     position: absolute;
     content: "Add source to view image";

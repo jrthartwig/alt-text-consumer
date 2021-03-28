@@ -3,6 +3,7 @@ import { fetchFile } from '../api';
 import { APP_IMAGE_ENDPOINT } from '../api-endpoints';
 import CodeOutput from '../CodeOutput';
 import { convertToArrayBuffer, convertToBase64 } from '../converter';
+import { Upload } from '../Icons';
 import OutputCenter from '../OutputCenter';
 import UploadCenter from '../UploadCenter';
 import './__.css';
@@ -41,14 +42,15 @@ const ImageUploadMethod = () => {
         <>
             <input {...{
                 'aria-label': "image input",
+                className: "image-upload-method__choose-file-input",
+                id: 'chooseFile',
                 type: "file",
                 accept: "image/*",
                 onChange: e => handleFileUpload(e),
             }} />
 
-
-
-
+            <label for="chooseFile"><Upload/> Choose a file</label>
+            
             {fetching && <div className='image-upload-method__fetching'></div>}
 
             <div className={`image-upload-method__result${hasResult && imageSource && !fetching ? '--active' : ''}`}>
@@ -57,7 +59,6 @@ const ImageUploadMethod = () => {
             </div>
 
             <UploadCenter {...{ imageSource, retrieveAltText }} />
-            {/* <UploadCenter altText={"image to upload"} imageSource={imageSource} retrieveAltText={retrieveAltText} /> */}
         </>
     )
 }
