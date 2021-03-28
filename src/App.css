@@ -46,6 +46,9 @@ textarea {
   height: 7.5rem;
 }
 
+button {
+  cursor: pointer;
+}
 /* .App {
   text-align: center;
 }

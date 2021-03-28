@@ -4,13 +4,13 @@
     justify-items: center;
     align-items: center;
     max-width: 99.2rem;
-    margin: 1.5rem auto;
+    margin: 3rem auto;
 }
 
 .action-button,
 .action-button--selected {
     width: 100%;
-    height: 15rem;
+    height: 15.5rem;
     background-color: transparent;
     border: 0.2rem solid #ccc;
     color: #ccc;
@@ -27,6 +27,7 @@
     border-color: var(--light-color);
     outline: var(--light-color);
     transform: scale(1);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .action-button__icon {

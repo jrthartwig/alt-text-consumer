@@ -6,13 +6,16 @@ import OutputCenter from '../OutputCenter';
 import { ALT_TEXT_PLACE_HOLDER, DEFAULT_IMAGE } from '../defaults';
 import CodeOutput from '../CodeOutput';
 import './__.css';
+import { Spinner } from '../Icons';
 
 const UrlMethod = () => {
     const [imageSource, setImageSource] = useState(DEFAULT_IMAGE);
     const [altText, setAltText] = useState(ALT_TEXT_PLACE_HOLDER);
     const [hasResult, setHasResult] = useState();
+    const [fetching, setFetching] = useState();
 
     const retrieveAltText = async () => {
+        setFetching(true);
         try {
             const response = await fetchPOST(APP_ENDPOINT, {
                 language: "en",
@@ -23,6 +26,7 @@ const UrlMethod = () => {
         } catch (error) {
             console.error(error);
         }
+        setFetching(false);
     }
 
     return (
@@ -34,13 +38,13 @@ const UrlMethod = () => {
                 onChange: e => setImageSource(e.target.value)
             }} />
 
-            {altText !== ALT_TEXT_PLACE_HOLDER &&
-                <div className={`url-method__result${hasResult ? '--active' : ''}`}>
-                    <OutputCenter altText={altText} imageSource={imageSource} />
-                    <CodeOutput altText={altText} imageSource={imageSource} />
-                </div>}
+            {fetching && <div className='url-method__fetching'></div>}
+            <div className={`url-method__result${hasResult && imageSource && !fetching ? '--active' : ''}`}>
+                <CodeOutput {...{ altText, imageSource }} />
+                <OutputCenter {...{ altText, imageSource }} />
+            </div>
 
-            <UploadCenter imageSource={imageSource} retrieveAltText={retrieveAltText} />
+            <UploadCenter {...{ imageSource, retrieveAltText }} />
         </div>
     )
 }

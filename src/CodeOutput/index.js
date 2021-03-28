@@ -21,7 +21,7 @@ const CodeOutput = ({ imageSource, altText }) => {
                 document.queryCommandSupported('copy') &&
                 <button className={`code-output__copier${copySuccess ? " copied" : ""}`} onClick={copyToClipboard}><Copy /></button>
             }
-            <label className="code-output__title">HTML   Snippet</label>
+            <label className="code-output__title">HTML Snippet</label>
             <textarea className="code-output__pre-code" value={code} ref={inputRef} readOnly={true} />
         </div>
     );
