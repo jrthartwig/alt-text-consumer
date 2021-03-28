@@ -38,6 +38,7 @@ const UrlMethod = () => {
                 className: 'code',
                 value: imageSource,
                 onChange: e => setImageSource(e.target.value),
+                onClick: e => e.target.select(), 
                 placeholder:'https://www.my-domain.com/my-image.jpg'
             }} />
 
