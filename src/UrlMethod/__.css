@@ -88,7 +88,7 @@
 .url-method__fetching:before {
     animation: pulseDark 3s;
     animation-iteration-count: infinite;
-    height: 18.8rem;
+    height: 18.1rem;
     top: 0;
 }
 
