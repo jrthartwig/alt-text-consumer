@@ -2,9 +2,11 @@
     padding: 1.5rem 0;
     border-top: 0.1rem solid var(--light-color);
     margin-top: 1.5rem;
+    max-width: 99.2rem;
+    margin: 0 auto;
 }
 
-.url-method textarea {
+.url-method > textarea {
     color: var(--dark-color);
     border: 0.2rem solid var(--dark-color);
     border-radius: 0.3rem;
@@ -13,10 +15,10 @@
     line-height: 1.4em;
     height: 10rem;
     font-weight: 700;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
 }
 
-.url-method button {
+.url-method__generate-button {
     background-color: transparent;
     border: 0.2rem solid var(--light-color);
     border-radius: 0.3rem;
@@ -26,5 +28,28 @@
     padding: 1rem 0.7rem;
     width: 100%;
     font-weight: 700;
-
+}
+.url-method__display-image {
+    background-color: #efefef;
+    border-radius: 0.3rem;
+    border: 0.2rem solid var(--light-color);
+    padding: 2rem;
+    background-color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+.url-method__image-placeholder {
+    position: relative;
+    min-height: 10rem;
+    background-color: #333;
+}
+.url-method__image-placeholder:after {
+    position: absolute;
+    content: "Enter source URL to view image";
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--light-color);
 }

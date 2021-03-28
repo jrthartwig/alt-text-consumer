@@ -10,6 +10,7 @@ import './__.css';
 const UrlMethod = () => {
     const [imageSource, setImageSource] = useState(DEFAULT_IMAGE);
     const [altText, setAltText] = useState(ALT_TEXT_PLACE_HOLDER);
+    const [hasResult, setHasResult] = useState();
 
     const retrieveAltText = async () => {
         try {
@@ -18,6 +19,7 @@ const UrlMethod = () => {
                 url: imageSource,
             });
             setAltText(response[0].text);
+            setHasResult(true);
         } catch (error) {
             console.error(error);
         }
@@ -32,16 +34,13 @@ const UrlMethod = () => {
                 onChange: e => setImageSource(e.target.value)
             }} />
 
+            {altText !== ALT_TEXT_PLACE_HOLDER &&
+                <div className={`url-method__result${hasResult ? '--active' : ''}`}>
+                    <OutputCenter altText={altText} imageSource={imageSource} />
+                    <CodeOutput altText={altText} imageSource={imageSource} />
+                </div>}
+
             <UploadCenter imageSource={imageSource} retrieveAltText={retrieveAltText} />
-            {
-                altText === ALT_TEXT_PLACE_HOLDER
-                    ? <div>Alt text has not been generated.</div>
-                    : <OutputCenter altText={altText} imageSource={imageSource} />
-            }
-            {
-                altText !== ALT_TEXT_PLACE_HOLDER
-                && <CodeOutput altText={altText} imageSource={imageSource} />
-            }
         </div>
     )
 }
