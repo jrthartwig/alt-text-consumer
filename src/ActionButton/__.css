@@ -8,7 +8,7 @@
 }
 @media screen and (min-width: 768px) {
     .action-buttons {
-        grid-template-columns:20rem;
+        grid-template-columns: 20rem;
         grid-template-rows: 20rem 20rem;
         padding: 1.5rem;
     }
@@ -24,6 +24,12 @@
     transition-duration: 0.5s;
 }
 
+@media screen and (min-width: 768px) {
+    .action-button,
+    .action-button--selected {
+        height: 17rem;
+    }
+}
 .action-button {
     transform: scale(0.9);
 }
