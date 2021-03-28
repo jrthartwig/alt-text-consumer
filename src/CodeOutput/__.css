@@ -1,0 +1,46 @@
+.code-output {
+    position: relative;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    color:white;
+    font-weight: 900;
+    padding: 1rem;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.code-output__title {
+    display: block;
+    width: 100%;
+    font-size: 3.2rem;
+    padding-bottom: 2rem;
+}
+
+button.code-output__copier {
+    position: absolute;
+    width: auto;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    border: 0.2rem solid var(--light-color);
+    border-radius: 0.3rem;
+    padding: 1rem 1.5rem;
+    font-size: 2.5rem;
+    line-height: 1em;
+    color: var(--light-color);
+    color:white;
+    box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.9);
+}
+
+.code-output__pre-code {
+    width: 100%;
+    background-color: var(--light-color);
+    background-color:white;
+    font-size: 1.05em;
+    font-weight: 900;
+    padding-bottom: 0.3rem 0.7rem;
+    color: var(--dark-color);
+    line-height: 1.4em;
+    height: 10rem;
+    letter-spacing: 0.1rem;
+}

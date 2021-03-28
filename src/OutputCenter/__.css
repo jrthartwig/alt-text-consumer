@@ -1,0 +1,19 @@
+.output-center {
+    display: grid;
+    grid-template-columns: 2rem auto 2rem;
+    column-gap: 1rem;
+    margin:  1.5rem 0;
+    padding: 2rem 0;
+    border-top: 1rem solid var(--light-color);
+    border-bottom: 0.3rem solid var(--light-color);
+    text-align: center;
+}
+
+.output-center__alt-text{
+    font-weight: 700;
+    font-style: italic;
+}
+
+.output-center img {
+    display: none;
+}
