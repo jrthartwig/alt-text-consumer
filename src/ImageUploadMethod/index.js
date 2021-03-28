@@ -49,7 +49,7 @@ const ImageUploadMethod = () => {
                 onChange: e => handleFileUpload(e),
             }} />
 
-            <label for="chooseFile"><Upload /> Choose a file</label>
+            <label htmlFor="chooseFile"><Upload /> Choose a file</label>
 
             {fetching && <div className='image-upload-method__fetching'></div>}
 

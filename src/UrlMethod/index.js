@@ -31,7 +31,7 @@ const UrlMethod = () => {
 
     return (
         <div className="url-method">
-            <label className="url-method__url-input-label" for='url'>Image Url</label>
+            <label className="url-method__url-input-label" htmlFor='url'>Image Url</label>
             <textarea {...{
                 'aria-label': "image url",
                 id: 'url',
