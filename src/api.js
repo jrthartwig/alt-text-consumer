@@ -1,20 +1,22 @@
-export const fetchPOST = (url, body) => {
-    return fetch(url, {
+export const fetchPOST = async (url, body) => {
+    const response = await fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(body)
-    }).then(response => response.json());
+    });
+    return await response.json();
 }
 
-export const fetchFile = (url, data) => {
-    return fetch(url, {
+export const fetchFile = async (url, data) => {
+    const response = await fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/octet-stream',
             'Ocp-Apim-Subscription-Key': process.env.REACT_APP_KEY
         },
         body: data
-    }).then(response => response.json());
+    });
+    return await response.json();
 }
