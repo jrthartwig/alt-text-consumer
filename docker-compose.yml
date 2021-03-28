@@ -1,0 +1,14 @@
+version: '3.7' #version of docker-compose 
+
+services:
+
+  front-end:
+    container_name: front-end
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app' #persisting data -- ask brock
+    ports:
+      - 80:3000
+    command: ["bash", "-c", "npm start"]
