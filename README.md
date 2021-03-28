@@ -1,6 +1,6 @@
 # Alt-Text-Consumer
 
-##Running The Application Locally
+## Running The Application Locally
 * Clone the repository 
   * Open a terminal 
   * Run `git clone https://github.com/jrthartwig/alt-text-consumer.git`
