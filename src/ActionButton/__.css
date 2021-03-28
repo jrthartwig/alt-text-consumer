@@ -3,12 +3,13 @@
     grid-template-columns: 50% 50%;
     justify-items: center;
     align-items: center;
+    max-width: 99.2rem;
+    margin: 1.5rem auto;
 }
 
 .action-button,
 .action-button--selected {
     width: 100%;
-    max-width: 15rem;
     height: 15rem;
     background-color: transparent;
     border: 0.2rem solid #ccc;
@@ -16,9 +17,11 @@
     border-radius: 0.3rem;
     transition-duration: 0.5s;
 }
-.action-button{
+
+.action-button {
     transform: scale(0.9);
 }
+
 .action-button--selected {
     color: var(--light-color);
     border-color: var(--light-color);

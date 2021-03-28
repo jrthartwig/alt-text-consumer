@@ -8,4 +8,3 @@ export const Globe = () => <FontAwesomeIcon icon={faGlobe} />
 export const QuoteLeft = () => <FontAwesomeIcon icon={faQuoteLeft} />
 export const QuoteRight = () => <FontAwesomeIcon icon={faQuoteRight} />
 export const Cog = props => <FontAwesomeIcon icon={faCog} {...props} />
-
