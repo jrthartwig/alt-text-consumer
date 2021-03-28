@@ -12,6 +12,7 @@
     padding: 2rem;
     background-color: var(--dark-color);
     margin-bottom: 1rem;
+    text-align: center;
 }
 .upload-center__image-placeholder {
     position: relative;
