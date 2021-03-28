@@ -16,8 +16,9 @@
     padding-bottom: 2rem;
 }
 
-.code-output__copier {
+button.code-output__copier {
     position: absolute;
+    width: auto;
     top: 1rem;
     right: 1rem;
     background-color: transparent;
@@ -25,6 +26,7 @@
     border-radius: 0.3rem;
     padding: 1rem 1.5rem;
     font-size: 2.5rem;
+    line-height: 1em;
     color: var(--light-color);
     color:white;
     box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.9);

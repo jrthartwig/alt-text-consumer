@@ -18,19 +18,10 @@
 
 .image-upload-method__choose-file-input + label {
     display: block;
-    width: 100%;
-    padding: 1rem;
-    text-align: center;
-    font-weight: 900;
-    letter-spacing: 0.1rem;
     color: var(--dark-color);
     border: 0.2rem solid var(--dark-color);
     background-color: transparent;
-    text-transform: uppercase;
-    border-radius: 0.3rem;
     margin-bottom: 1.5rem;
-    cursor: pointer;
-    transition-duration: 0.3s;
 }
 
 .image-upload-method__image-placeholder {
