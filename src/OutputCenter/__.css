@@ -1,5 +1,17 @@
 .output-center {
-    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: 2rem auto 2rem;
+    column-gap: 1rem;
+    margin:  1.5rem 0;
+    padding: 2rem 0;
+    border-top: 0.2rem solid var(--light-color);
+    border-bottom: 1rem solid var(--light-color);
+    text-align: center;
+}
+
+.output-center__alt-text{
+    font-weight: 700;
+    font-style: italic;
 }
 
 .output-center img {
