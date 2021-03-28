@@ -101,24 +101,24 @@
 
 @keyframes pulseDark {
     0% {
-        background-color: rgba(2, 69, 107, 0.5);
-    }
-    50% {
         background-color: rgba(2, 69, 107, 0.1);
     }
+    50% {
+        background-color: rgba(2, 69, 107, 0.8);
+    }
     100% {
-        background-color: rgba(2, 69, 107, 0.5);
+        background-color: rgba(2, 69, 107, 0.1);
     }
 }
 
 @keyframes pulseLight {
     0% {
-        background-color: rgba(255, 180, 7, 0.5);
-    }
-    50% {
         background-color: rgba(255, 180, 7, 0.1);
     }
+    50% {
+        background-color: rgba(255, 180, 7, 0.8);
+    }
     100% {
-        background-color: rgba(255, 180, 7, 0.5);
+        background-color: rgba(255, 180, 7, 0.1);
     }
 }

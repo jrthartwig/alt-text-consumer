@@ -31,11 +31,14 @@ const UrlMethod = () => {
 
     return (
         <div className="url-method">
+            <label className="url-method__url-input-label" for='url'>Image Url</label>
             <textarea {...{
                 'aria-label': "image url",
+                id: 'url',
                 className: 'code',
                 value: imageSource,
-                onChange: e => setImageSource(e.target.value)
+                onChange: e => setImageSource(e.target.value),
+                placeholder:'https://www.my-domain.com/my-image.jpg'
             }} />
 
             {fetching && <div className='url-method__fetching'></div>}

@@ -5,15 +5,23 @@
     margin: 1.5rem auto;
 }
 
+.url-method__url-input-label {
+    display: block;
+    padding: 1rem 0.5rem;
+    font-weight: 900;
+    font-size: 1.4rem;
+    text-transform: ;
+    color: var(--dark-color);
+}
+
 .url-method > textarea {
     color: var(--dark-color);
-    border: 0.2rem solid var(--light-color);
+    border: 0.2rem solid var(--dark-color);
     border-radius: 0.3rem;
     padding: 1rem;
     font-size: 0.75em;
     line-height: 1.4em;
     height: 10rem;
-    font-weight: 700;
     letter-spacing: 0.1rem;
     margin-bottom: 1.5rem;
 }
@@ -44,7 +52,7 @@
     display: block;
     width: 100%;
     background-color: #efefef;
-    border: 0.2rem solid  rgba(255, 180, 7, 0.3);
+    border: 0.2rem solid rgba(255, 180, 7, 0.3);
 }
 
 .url-method__fetching:before {
