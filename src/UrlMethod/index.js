@@ -45,10 +45,10 @@ const UrlMethod = () => {
             {fetching && <div className='url-method__fetching'></div>}
             <div className={`url-method__result${hasResult && imageSource && !fetching ? '--active' : ''}`}>
                 <CodeOutput {...{ altText, imageSource }} />
-                <OutputCenter {...{ altText, imageSource }} />
+                <OutputCenter {...{ altText }} />
             </div>
 
-            <UploadCenter {...{ imageSource, retrieveAltText }} />
+            <UploadCenter {...{ imageSource, retrieveAltText, altText }} />
         </div>
     )
 }

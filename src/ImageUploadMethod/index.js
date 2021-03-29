@@ -58,7 +58,7 @@ const ImageUploadMethod = () => {
                 <OutputCenter {...{ altText, imageSource }} />
             </div>
 
-            <UploadCenter {...{ imageSource, retrieveAltText }} />
+            <UploadCenter {...{ imageSource, retrieveAltText, altText }} />
         </div>
     )
 }
