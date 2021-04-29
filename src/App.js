@@ -10,15 +10,19 @@ import './App.css';
 const App = () => {
   const [useUrl, setUseUrl] = useState(true);
 
-  const getImageFromUrl = () => setUseUrl(true);
-  const getImageFromFile = () => setUseUrl(false);
+  // const getImageFromUrl = () => setUseUrl(true);
+  // const getImageFromFile = () => setUseUrl(false);
 
   return (
-    <div className="app">
-      <Header {...{ title: <>Alt Text <HeaderAltColor>Generator</HeaderAltColor></> }} />
+    <div className="app" data-testid="app">
+      <Header {...{
+        title: <>Alt Text <HeaderAltColor>Generator</HeaderAltColor></>,
+        "data-testid": "header"
+      }} />
       <div className="app__content">
 
-        <ActionsButtonList>
+
+        {/* <ActionsButtonList>
           <ActionButton {...{
             onClick: getImageFromUrl,
             selected: useUrl,
@@ -32,11 +36,12 @@ const App = () => {
             icon: <File />,
             text: "Generate From File",
           }} />
-        </ActionsButtonList>
+        </ActionsButtonList> */}
 
         {useUrl
           ? <UrlMethod />
           : <ImageUploadMethod />}
+
 
       </div>
     </div>
